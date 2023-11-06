@@ -72,4 +72,22 @@ public class PhoneBookTest {
         Assert.assertEquals(expected, result);
     }
 
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        String name1 = "Bob";
+        String number1 = "1111";
+
+        String name2 = "Ann";
+        String number2 = "2222";
+
+        phoneBook.add(name1, number1);
+        phoneBook.add(name2, number2);
+
+        String result = phoneBook.printAllNames();
+        String expected = "Ann, Bob";
+
+        Assert.assertEquals(expected, result);
+    }
+
 }
