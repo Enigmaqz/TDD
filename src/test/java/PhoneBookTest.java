@@ -49,9 +49,9 @@ public class PhoneBookTest {
 
         phoneBook.add(name1, number1);
         String result;
-        result = phoneBook.findByNumber(name1);
+        result = phoneBook.findByNumber(number1);
 
-        String expected = "1111";
+        String expected = "Bob";
 
         Assert.assertEquals(expected, result);
     }
