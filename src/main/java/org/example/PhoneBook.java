@@ -28,6 +28,20 @@ public class PhoneBook {
     }
 
     public String printAllNames () {
-        return null;
+        String result = null;
+
+        StringBuilder stringBuilder = new StringBuilder();
+        int i = 0;
+        for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+            i++;
+            if (i != phoneBook.size()) {
+                stringBuilder.append(entry.getKey() + ", ");
+            } else {
+                stringBuilder.append(entry.getKey());
+            }
+        }
+        result = stringBuilder.toString();
+        System.out.println(result);
+        return result;
     }
 }

@@ -75,17 +75,22 @@ public class PhoneBookTest {
     @Test
     public void testPrintAllNames() {
         PhoneBook phoneBook = new PhoneBook();
+        String name0 = "Zendeya";
+        String number0 = "1111";
+
+
         String name1 = "Bob";
         String number1 = "1111";
 
         String name2 = "Ann";
         String number2 = "2222";
 
+        phoneBook.add(name0, number0);
         phoneBook.add(name1, number1);
         phoneBook.add(name2, number2);
 
         String result = phoneBook.printAllNames();
-        String expected = "Ann, Bob";
+        String expected = "Ann, Bob, Zendeya";
 
         Assert.assertEquals(expected, result);
     }
